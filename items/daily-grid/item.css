@@ -1,0 +1,182 @@
+/* ============================================================
+   Daily Grid - item styles
+   A 5x5 grid of real buttons (no canvas), the move counters
+   and the "solved" card.
+   ============================================================ */
+
+.dg-play {
+  padding-block: 1rem 1.4rem;
+  border-bottom: 1px solid var(--line);
+  background: var(--bg-2);
+}
+.dg-wrap {
+  width: 100%;
+  max-width: 440px;
+  margin-inline: auto;
+  padding-inline: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+}
+
+.dg-label {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.15rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: .2rem .6rem;
+}
+.dg-date {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: .85rem;
+  color: var(--text-dim);
+}
+
+/* ---- Moves | Par | Streak ---- */
+.dg-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .5rem;
+  margin: 0;
+}
+.dg-stats > div {
+  padding: .35rem .6rem;
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  border: 1px solid var(--line);
+}
+.dg-stats dt {
+  font-family: var(--font-mono);
+  font-size: .68rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+.dg-stats dd { margin: 0; }
+.dg-stats output {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.dg-stats .is-over { color: var(--amber); }
+
+/* ---- the board ---- */
+.dg-board {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: clamp(.35rem, 1.6vw, .55rem);
+  width: 100%;
+  aspect-ratio: 1;
+  touch-action: manipulation;
+  -webkit-user-select: none;
+          user-select: none;
+}
+.dg-tile {
+  min-width: 0;
+  min-height: var(--tap);
+  border-radius: 12px;
+  border: 1px solid var(--line-bright);
+  background: var(--surface-2);
+  cursor: pointer;
+  padding: 0;
+  transition: background .15s, border-color .15s, box-shadow .15s, transform .1s;
+}
+.dg-tile:hover { border-color: var(--text-faint); }
+.dg-tile:active { transform: scale(.94); }
+.dg-tile.is-on {
+  background: var(--amber);
+  border-color: var(--amber);
+  box-shadow: 0 0 18px rgba(255, 201, 60, .35), inset 0 -4px 0 rgba(0, 0, 0, .18);
+}
+.dg-tile:focus-visible {
+  outline: 3px solid var(--cyan);
+  outline-offset: 2px;
+}
+.dg-tile.is-flip { animation: dg-pop .2s ease-out; }
+@keyframes dg-pop {
+  40% { transform: scale(1.08); }
+}
+
+/* Solved: the tiles ripple out from the top-left corner. */
+.dg-board.is-won .dg-tile {
+  border-color: rgba(61, 245, 160, .5);
+  animation: dg-wave .55s ease-out both;
+}
+@keyframes dg-wave {
+  30% { background: var(--green); transform: scale(1.06); }
+}
+.dg-d1 { animation-delay: .05s !important; }
+.dg-d2 { animation-delay: .1s !important; }
+.dg-d3 { animation-delay: .15s !important; }
+.dg-d4 { animation-delay: .2s !important; }
+.dg-d5 { animation-delay: .25s !important; }
+.dg-d6 { animation-delay: .3s !important; }
+.dg-d7 { animation-delay: .35s !important; }
+.dg-d8 { animation-delay: .4s !important; }
+
+/* ---- buttons under the board ---- */
+.dg-actions,
+.dg-win-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+.dg-actions .btn,
+.dg-win-actions .btn {
+  flex: 1 1 0;
+  min-height: var(--tap);
+  min-width: 6rem;
+}
+
+/* ---- solved card ---- */
+.dg-win {
+  border: 1px solid rgba(61, 245, 160, .45);
+  border-radius: var(--radius);
+  background: var(--surface);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: .55rem;
+}
+.dg-win p { margin: 0; }
+.dg-win-kicker {
+  font-family: var(--font-mono);
+  font-size: .75rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--green);
+}
+.dg-win-line {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+.dg-bar { font-size: 1.3rem; letter-spacing: .1em; line-height: 1.3; }
+.dg-next { font-size: .88rem; color: var(--text-dim); }
+
+.dg-copy { display: flex; flex-direction: column; gap: .3rem; font-size: .88rem; color: var(--text-dim); }
+.dg-copy textarea {
+  width: 100%;
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  color: var(--text);
+  background: var(--bg-2);
+  border: 1px solid var(--line-field);
+  border-radius: var(--radius-sm);
+  padding: .5rem;
+  resize: none;
+}
+
+.dg-status {
+  margin: 0;
+  min-height: 1.5em;
+  font-size: .9rem;
+  color: var(--text-dim);
+  text-align: center;
+}
+.dg-status.is-ok { color: var(--green); }
