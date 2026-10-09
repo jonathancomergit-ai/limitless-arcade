@@ -28,5 +28,38 @@
       "daily"
     ],
     "added": "2026-10-09"
+  },
+  {
+    "slug": "slime-dash",
+    "title": "Slime Dash",
+    "blurb": "A bouncy slime on an endless run. Tap to hop, hold to fly higher, and don't touch the spikes.",
+    "tags": [
+      "runner",
+      "one-button"
+    ],
+    "added": "2026-10-09",
+    "soon": true
+  },
+  {
+    "slug": "gravity-golf",
+    "title": "Gravity Golf",
+    "blurb": "Mini golf in space. Pull back, aim, and let the planets' gravity curve your shot into the hole.",
+    "tags": [
+      "physics",
+      "puzzle"
+    ],
+    "added": "2026-10-09",
+    "soon": true
+  },
+  {
+    "slug": "brick-breaker",
+    "title": "Brick Breaker+",
+    "blurb": "The classic brick breaker, with real bounce angles, tough bricks and power-ups like multi-ball and lasers.",
+    "tags": [
+      "action",
+      "physics"
+    ],
+    "added": "2026-10-09",
+    "soon": true
   }
 ]
