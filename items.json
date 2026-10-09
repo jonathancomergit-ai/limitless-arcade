@@ -7,7 +7,8 @@
       "action",
       "arena"
     ],
-    "added": "2026-10-09"
+    "added": "2026-10-09",
+    "thumb": "thumb.webp"
   },
   {
     "slug": "orbit-sling",
@@ -17,7 +18,8 @@
       "physics",
       "one-button"
     ],
-    "added": "2026-10-09"
+    "added": "2026-10-09",
+    "thumb": "thumb.webp"
   },
   {
     "slug": "daily-grid",
@@ -27,7 +29,8 @@
       "puzzle",
       "daily"
     ],
-    "added": "2026-10-09"
+    "added": "2026-10-09",
+    "thumb": "thumb.webp"
   },
   {
     "slug": "slime-dash",
@@ -37,7 +40,8 @@
       "runner",
       "one-button"
     ],
-    "added": "2026-10-09"
+    "added": "2026-10-09",
+    "thumb": "thumb.webp"
   },
   {
     "slug": "gravity-golf",
@@ -47,7 +51,8 @@
       "physics",
       "puzzle"
     ],
-    "added": "2026-10-09"
+    "added": "2026-10-09",
+    "thumb": "thumb.webp"
   },
   {
     "slug": "brick-breaker",
@@ -57,6 +62,7 @@
       "action",
       "physics"
     ],
-    "added": "2026-10-09"
+    "added": "2026-10-09",
+    "thumb": "thumb.webp"
   }
 ]
