@@ -1,0 +1,102 @@
+/* ============================================================
+   Brick Breaker+ - item styles
+   The HUD score, and the start / pause / game-over screens
+   that sit over the stage.
+   ============================================================ */
+
+.bb-hud { z-index: 3; }
+.bb-hud output { font-variant-numeric: tabular-nums; }
+.bb-score output { font-size: clamp(1.5rem, 7vw, 2rem); color: var(--amber); }
+.bb-score.is-pop output { color: var(--green); }
+
+/* ---- overlay screens ---- */
+.bb-screen {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .7rem;
+  padding: 4.5rem 1.2rem 1.2rem;
+  text-align: center;
+  background: rgba(7, 7, 12, .9);
+  touch-action: manipulation;
+}
+.bb-screen h2 {
+  font-size: clamp(1.8rem, 8vw, 2.6rem);
+  margin: 0;
+}
+.bb-kicker {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: .75rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.bb-hint {
+  margin: 0;
+  font-size: .88rem;
+  color: var(--text-dim);
+}
+
+.bb-rules {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .4rem;
+}
+.bb-rules li {
+  padding: .3rem .7rem;
+  border-radius: 999px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  font-size: .9rem;
+}
+
+.bb-big {
+  min-width: 11rem;
+  min-height: 56px;
+  font-size: 1.15rem;
+}
+
+.bb-stats {
+  display: flex;
+  gap: .5rem;
+  margin: 0;
+}
+.bb-stats > div {
+  min-width: 5.2rem;
+  padding: .45rem .6rem;
+  border-radius: var(--radius-sm);
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+}
+.bb-stats dt {
+  font-family: var(--font-mono);
+  font-size: .68rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+.bb-stats dd {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+/* ---- Brick Breaker+ extras ---- */
+.bb-hud > div { padding-inline: .45rem; }
+.bb-score output { font-size: 1.3rem; }
+.bb-lives output { color: var(--hot); }
+.bb-rules li { font-size: .85rem; }
+.bb-rules b { font-weight: 400; margin-right: .2rem; }
+.bb-c1 { color: var(--cyan); }
+.bb-c2 { color: var(--amber); }
+.bb-c3 { color: var(--hot); }
