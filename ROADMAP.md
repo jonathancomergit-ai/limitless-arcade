@@ -49,7 +49,7 @@ Tonight's three for 🎮 Arcade, in this order.
 
 ### Batch 2
 
-- [ ] `slime-dash` - Slime Dash: A bouncy slime on an endless run. Tap to hop, hold to fly higher, and don't touch the spikes.
+- [x] `slime-dash` - Slime Dash: A bouncy slime on an endless run. Tap to hop, hold to fly higher, and don't touch the spikes.
   - acceptance: Tap = small hop, hold = higher jump (variable jump height); Space / Up / click on desktop
   - acceptance: Endless level built from seeded chunks: spikes, gaps, low ceilings, moving platforms; speed ramps up slowly
   - acceptance: Coins to collect; score = distance + coins; squash-and-stretch on the slime for a juicy feel
