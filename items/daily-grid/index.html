@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!-- Do not edit this line. It's the privacy lock, and the tests check it. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://gc.zgo.at; connect-src 'self' https://jonjoe1001.goatcounter.com; img-src 'self' data: blob: https://jonjoe1001.goatcounter.com; style-src 'self'; font-src 'self'; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <title>Daily Grid - Limitless Lab</title>
+  <meta name="description" content="One new lights puzzle every day, the same for everyone. Turn every tile off in as few taps as you can.">
+  <meta name="theme-color" content="#07070C">
+
+  <link rel="icon" href="../../kit/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../kit/kit.css">
+  <link rel="stylesheet" href="item.css">
+  <script type="module" src="main.js"></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===================== TOP BAR ===================== -->
+  <header class="item-bar">
+    <a class="back-link" href="../../"><span aria-hidden="true">&larr;</span> <span data-slot="wing-name">Hub</span></a>
+    <h1>Daily Grid</h1>
+  </header>
+
+  <main id="main">
+    <!-- ===================== THE PUZZLE ===================== -->
+    <section class="dg-play" aria-labelledby="dg-label">
+      <div class="dg-wrap">
+        <p class="dg-label" id="dg-label"><span id="mode-name">Today</span> <span class="dg-date" id="date">&nbsp;</span></p>
+
+        <dl class="dg-stats">
+          <div><dt>Moves</dt><dd><output id="moves">0</output></dd></div>
+          <div><dt>Par</dt><dd><output id="par">0</output></dd></div>
+          <div><dt>Streak</dt><dd><output id="streak">0</output></dd></div>
+        </dl>
+
+        <div class="dg-board" id="board" role="group" aria-label="Lights grid, 5 by 5. Turn every tile off."></div>
+
+        <div class="dg-actions" id="actions">
+          <button class="btn" id="undo" type="button">Undo</button>
+          <button class="btn" id="restart" type="button">Restart</button>
+          <button class="btn btn-ghost" id="practice" type="button">Practice</button>
+        </div>
+
+        <!-- Shown when solved -->
+        <div class="dg-win" id="win" hidden>
+          <p class="dg-win-kicker" id="win-kicker">Solved</p>
+          <p class="dg-win-line" id="win-line">0 moves</p>
+          <p class="dg-bar" id="win-bar" aria-hidden="true"></p>
+          <div class="dg-win-actions">
+            <button class="btn btn-primary" id="share" type="button">Share result</button>
+            <button class="btn" id="again" type="button">Play again</button>
+            <button class="btn btn-ghost" id="practice-2" type="button">Practice</button>
+          </div>
+          <p class="dg-next" id="next"></p>
+          <label class="dg-copy" id="copy-box" hidden>
+            <span>Copy this:</span>
+            <textarea id="copy-text" rows="3" readonly></textarea>
+          </label>
+        </div>
+
+        <p class="dg-status" id="status" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <!-- ===================== HOW TO ===================== -->
+    <div class="wrap item-info">
+      <section id="how" aria-labelledby="how-title">
+        <h2 id="how-title">How to play</h2>
+        <ol>
+          <li>Tap a tile. It <strong>flips</strong>, and so do the 4 next to it.</li>
+          <li>Goal: turn <strong>every tile off</strong>.</li>
+          <li><strong>Par</strong> = the fewest taps that can do it.</li>
+          <li>A new puzzle every day at midnight. Everyone gets the same one.</li>
+          <li>Solve days in a row to grow your <strong>streak</strong>.</li>
+          <li><strong>Practice</strong> gives a random puzzle. It doesn't touch your streak.</li>
+        </ol>
+        <table class="controls">
+          <thead><tr><th scope="col">Do this</th><th scope="col">Phone</th><th scope="col">Keyboard</th></tr></thead>
+          <tbody>
+            <tr><td>Flip a tile</td><td>Tap it</td><td>Arrows, then <kbd>Space</kbd> or <kbd>Enter</kbd></td></tr>
+            <tr><td>Undo</td><td>Undo button</td><td><kbd>U</kbd> or <kbd>Backspace</kbd></td></tr>
+            <tr><td>Restart</td><td>Restart button</td><td><kbd>R</kbd></td></tr>
+            <tr><td>Practice</td><td>Practice button</td><td>Tab to it, <kbd>Enter</kbd></td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <div id="save-panel"></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p class="privacy-note">
+        <strong>No accounts, no cookies.</strong> Saves stay on your device.
+        Cookie-free visit counts via GoatCounter.
+      </p>
+    </div>
+  </footer>
+
+  <script src="../../kit/stats.js" defer></script>
+</body>
+</html>

@@ -37,7 +37,7 @@ Tonight's three for 🎮 Arcade, in this order.
   - acceptance: Reduced motion: no camera shake or trails
   - acceptance: smoke.js: tap or press Space and check the ship went from orbiting to flying
 
-- [ ] `daily-grid` - Daily Grid: One new lights puzzle every day, the same for everyone. Turn every tile off in as few taps as you can.
+- [x] `daily-grid` - Daily Grid: One new lights puzzle every day, the same for everyone. Turn every tile off in as few taps as you can.
   - acceptance: 5x5 grid; tapping a tile flips it and its 4 neighbours (Lights Out rules)
   - acceptance: Today's puzzle comes from a seeded random number from the local date (YYYY-MM-DD), made by pressing random tiles on a solved grid, so it is always solvable; show its par (number of presses used)
   - acceptance: Count moves; Undo and Restart buttons; keyboard: arrows move a cursor, Space/Enter flips
