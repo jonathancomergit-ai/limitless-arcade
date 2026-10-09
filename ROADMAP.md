@@ -67,7 +67,7 @@ Tonight's three for 🎮 Arcade, in this order.
   - acceptance: Unit test (tests/unit): the physics step is deterministic, and every level's data is valid (ball, hole and planets on screen, not overlapping)
   - acceptance: smoke.js: drag/shoot, check strokes became 1 and the ball moved
 
-- [ ] `brick-breaker` - Brick Breaker+: The classic brick breaker, with real bounce angles, tough bricks and power-ups like multi-ball and lasers.
+- [x] `brick-breaker` - Brick Breaker+: The classic brick breaker, with real bounce angles, tough bricks and power-ups like multi-ball and lasers.
   - acceptance: Paddle: drag anywhere on phone, mouse or arrow keys on desktop; tap / Space launches
   - acceptance: Bounce angle depends on where the ball hits the paddle; proper circle-vs-rectangle collisions (no tunnelling at high speed)
   - acceptance: Bricks with 1-3 hit points (colour shows HP); power-ups: multi-ball, wide paddle, slow ball, laser, extra life
