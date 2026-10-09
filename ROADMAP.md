@@ -59,7 +59,7 @@ Tonight's three for 🎮 Arcade, in this order.
   - acceptance: Unit test (tests/unit): chunk generator is deterministic for a seed and every chunk is jumpable (gap widths under max jump distance)
   - acceptance: smoke.js: start, tap/press to jump, check the slime left the ground and the distance went up
 
-- [ ] `gravity-golf` - Gravity Golf: Mini golf in space. Pull back, aim, and let the planets' gravity curve your shot into the hole.
+- [x] `gravity-golf` - Gravity Golf: Mini golf in space. Pull back, aim, and let the planets' gravity curve your shot into the hole.
   - acceptance: Drag back from the ball to aim (slingshot); a dotted preview shows the first moment of the path; arrow keys + Space on desktop
   - acceptance: Planets pull the ball with inverse-square gravity; black holes swallow it; asteroids bounce it
   - acceptance: 12 hand-made holes in items/gravity-golf/levels.js, each with a par; strokes and a scorecard

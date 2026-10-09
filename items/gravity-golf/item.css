@@ -1,0 +1,181 @@
+/* ============================================================
+   Gravity Golf - item styles
+   The HUD, the start / pause / hole-done / round-over screens
+   over the stage, the hole picker and the scorecard.
+   ============================================================ */
+
+.gg-hud { z-index: 3; }
+.gg-hud output { font-variant-numeric: tabular-nums; }
+.gg-strokes output { color: var(--amber); }
+.gg-strokes.is-pop output { color: var(--hot); }
+
+/* A short message under the HUD ("Lost in space! +1"). It hides as soon as you aim. */
+.gg-toast {
+  position: absolute;
+  left: 50%;
+  top: 2.9rem;
+  z-index: 3;
+  transform: translateX(-50%);
+  max-width: calc(100% - 2rem);
+  margin: 0;
+  padding: .35rem .8rem;
+  border-radius: 999px;
+  background: rgba(7, 7, 12, .85);
+  border: 1px solid var(--line-bright);
+  font-size: .85rem;
+  color: var(--text);
+  text-align: center;
+  pointer-events: none;
+}
+
+/* The caddie line under the stage: hole name + a tip. */
+.gg-caddie {
+  margin: 0;
+  padding: .6rem clamp(.8rem, 3vw, 1.5rem);
+  background: var(--bg-2);
+  border-bottom: 1px solid var(--line);
+  font-size: .92rem;
+  color: var(--text-dim);
+  text-align: center;
+}
+.gg-caddie strong { color: var(--text); margin-right: .35rem; }
+
+/* ---- overlay screens ---- */
+.gg-screen {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .7rem;
+  padding: 3.6rem 1rem 1rem;
+  text-align: center;
+  background: rgba(7, 7, 12, .9);
+  touch-action: manipulation;
+  overflow-y: auto;
+}
+.gg-screen h2 {
+  font-size: clamp(1.8rem, 8vw, 2.6rem);
+  margin: 0;
+}
+.gg-kicker {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: .75rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.gg-hint {
+  margin: 0;
+  font-size: .88rem;
+  color: var(--text-dim);
+}
+.gg-end-vs {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--amber);
+}
+.gg-big {
+  min-width: 11rem;
+  min-height: 56px;
+  font-size: 1.15rem;
+}
+.gg-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .5rem;
+}
+
+/* ---- hole picker ---- */
+.gg-holes {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: .4rem;
+  width: 100%;
+  max-width: 22rem;
+}
+@media (min-width: 700px) {
+  .gg-holes { grid-template-columns: repeat(6, minmax(0, 1fr)); max-width: 30rem; }
+}
+.gg-hole-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: .2rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line-bright);
+  background: var(--surface-2);
+  color: var(--text);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  cursor: pointer;
+}
+.gg-hole-btn:hover,
+.gg-hole-btn:focus-visible { border-color: var(--accent); }
+.gg-hole-btn small {
+  font-family: var(--font-mono);
+  font-size: .68rem;
+  font-weight: 500;
+  color: var(--text-faint);
+}
+.gg-hole-btn.is-under small { color: var(--green); }
+
+/* ---- hole-done stats ---- */
+.gg-stats {
+  display: flex;
+  gap: .5rem;
+  margin: 0;
+}
+.gg-stats > div {
+  min-width: 5rem;
+  padding: .45rem .6rem;
+  border-radius: var(--radius-sm);
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+}
+.gg-stats dt {
+  font-family: var(--font-mono);
+  font-size: .68rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+.gg-stats dd {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+/* ---- scorecard (under the stage) ---- */
+.gg-side {
+  display: grid;
+  gap: var(--gap-lg);
+}
+.gg-scorecard td,
+.gg-scorecard tfoot th { font-variant-numeric: tabular-nums; }
+.gg-scorecard tbody th {
+  font-family: var(--font-body);
+  font-size: .92rem;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--text);
+}
+.gg-scorecard tbody th span {
+  display: block;
+  font-size: .78rem;
+  color: var(--text-faint);
+}
+.gg-scorecard tfoot th,
+.gg-scorecard tfoot td { font-weight: 700; color: var(--text); border-bottom: 0; }
+.gg-scorecard .is-now { background: var(--accent-dim); }
+.gg-scorecard .is-under { color: var(--green); }
+.gg-scorecard .is-over { color: var(--amber); }
