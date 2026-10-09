@@ -1,0 +1,95 @@
+/* ============================================================
+   Slime Dash - item styles
+   The HUD score, and the start / pause / game-over screens
+   that sit over the stage.
+   ============================================================ */
+
+.sd-hud { z-index: 3; }
+.sd-hud output { font-variant-numeric: tabular-nums; }
+.sd-score output { font-size: clamp(1.5rem, 7vw, 2rem); color: var(--amber); }
+.sd-score.is-pop output { color: var(--green); }
+.sd-coins output { color: var(--amber); }
+.sd-coins.is-pop output { color: var(--text); }
+
+/* ---- overlay screens ---- */
+.sd-screen {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .7rem;
+  padding: 4.5rem 1.2rem 1.2rem;
+  text-align: center;
+  background: rgba(7, 7, 12, .9);
+  touch-action: manipulation;
+}
+.sd-screen h2 {
+  font-size: clamp(1.8rem, 8vw, 2.6rem);
+  margin: 0;
+}
+.sd-kicker {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: .75rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.sd-hint {
+  margin: 0;
+  font-size: .88rem;
+  color: var(--text-dim);
+}
+
+.sd-rules {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .4rem;
+}
+.sd-rules li {
+  padding: .3rem .7rem;
+  border-radius: 999px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  font-size: .9rem;
+}
+
+.sd-big {
+  min-width: 11rem;
+  min-height: 56px;
+  font-size: 1.15rem;
+}
+
+.sd-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .5rem;
+  margin: 0;
+}
+.sd-stats > div {
+  min-width: 5.2rem;
+  padding: .45rem .6rem;
+  border-radius: var(--radius-sm);
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+}
+.sd-stats dt {
+  font-family: var(--font-mono);
+  font-size: .68rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+.sd-stats dd {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+}
