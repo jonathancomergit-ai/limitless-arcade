@@ -1,0 +1,92 @@
+/* ============================================================
+   Orbit Sling - item styles
+   The HUD score, and the start / pause / game-over screens
+   that sit over the stage.
+   ============================================================ */
+
+.os-hud { z-index: 3; }
+.os-hud output { font-variant-numeric: tabular-nums; }
+.os-score output { font-size: clamp(1.5rem, 7vw, 2rem); color: var(--amber); }
+.os-score.is-pop output { color: var(--green); }
+
+/* ---- overlay screens ---- */
+.os-screen {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .7rem;
+  padding: 4.5rem 1.2rem 1.2rem;
+  text-align: center;
+  background: rgba(7, 7, 12, .9);
+  touch-action: manipulation;
+}
+.os-screen h2 {
+  font-size: clamp(1.8rem, 8vw, 2.6rem);
+  margin: 0;
+}
+.os-kicker {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: .75rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.os-hint {
+  margin: 0;
+  font-size: .88rem;
+  color: var(--text-dim);
+}
+
+.os-rules {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .4rem;
+}
+.os-rules li {
+  padding: .3rem .7rem;
+  border-radius: 999px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  font-size: .9rem;
+}
+
+.os-big {
+  min-width: 11rem;
+  min-height: 56px;
+  font-size: 1.15rem;
+}
+
+.os-stats {
+  display: flex;
+  gap: .5rem;
+  margin: 0;
+}
+.os-stats > div {
+  min-width: 5.2rem;
+  padding: .45rem .6rem;
+  border-radius: var(--radius-sm);
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+}
+.os-stats dt {
+  font-family: var(--font-mono);
+  font-size: .68rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+.os-stats dd {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+}

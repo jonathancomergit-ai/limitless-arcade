@@ -28,7 +28,7 @@ Tonight's three for 🎮 Arcade, in this order.
   - acceptance: Reduced motion: no screen shake or flashes
   - acceptance: smoke.js: start, move (touch drag on phone, keys on desktop), check the clock went down and the player moved
 
-- [ ] `orbit-sling` - Orbit Sling: Circle a planet, tap to let go, and fling yourself to the next one. Real gravity, one thumb.
+- [x] `orbit-sling` - Orbit Sling: Circle a planet, tap to let go, and fling yourself to the next one. Real gravity, one thumb.
   - acceptance: One input: tap / click / Space releases you from orbit
   - acceptance: Planets pull with simple inverse-square gravity; getting close to a planet captures you into its orbit
   - acceptance: Score = planets reached; crash into a planet or drift off-screen = game over
