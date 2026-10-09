@@ -1,0 +1,35 @@
+[
+  {
+    "slug": "timeless-mini",
+    "title": "Timeless Mini",
+    "blurb": "A tiny arena where the clock is your health. Get hit, lose seconds. Win fights, win time back.",
+    "tags": [
+      "action",
+      "arena"
+    ],
+    "added": "2026-10-09",
+    "soon": true
+  },
+  {
+    "slug": "orbit-sling",
+    "title": "Orbit Sling",
+    "blurb": "Circle a planet, tap to let go, and fling yourself to the next one. Real gravity, one thumb.",
+    "tags": [
+      "physics",
+      "one-button"
+    ],
+    "added": "2026-10-09",
+    "soon": true
+  },
+  {
+    "slug": "daily-grid",
+    "title": "Daily Grid",
+    "blurb": "One new lights puzzle every day, the same for everyone. Turn every tile off in as few taps as you can.",
+    "tags": [
+      "puzzle",
+      "daily"
+    ],
+    "added": "2026-10-09",
+    "soon": true
+  }
+]
