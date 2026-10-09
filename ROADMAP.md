@@ -18,7 +18,7 @@ What to build next, in order. **Take the top unticked line.**
 
 Tonight's three for 🎮 Arcade, in this order.
 
-- [ ] `timeless-mini` - Timeless Mini: A tiny arena where the clock is your health. Get hit, lose seconds. Win fights, win time back.
+- [x] `timeless-mini` - Timeless Mini: A tiny arena where the clock is your health. Get hit, lose seconds. Win fights, win time back.
   - acceptance: Move: drag anywhere on the stage (virtual stick) on phone; WASD / arrow keys on desktop
   - acceptance: Shooting is automatic at the nearest enemy, so one thumb is enough
   - acceptance: The clock starts at 30s and drains 1s per second; a hit costs 3s, a kill gives +1s
