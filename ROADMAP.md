@@ -47,6 +47,35 @@ Tonight's three for 🎮 Arcade, in this order.
   - acceptance: Unit test (tests/unit): the generator is deterministic for a date and every generated puzzle is solvable
   - acceptance: smoke.js: tap a tile and check the move count is 1 and the tiles changed
 
+### Batch 2
+
+- [ ] `slime-dash` - Slime Dash: A bouncy slime on an endless run. Tap to hop, hold to fly higher, and don't touch the spikes.
+  - acceptance: Tap = small hop, hold = higher jump (variable jump height); Space / Up / click on desktop
+  - acceptance: Endless level built from seeded chunks: spikes, gaps, low ceilings, moving platforms; speed ramps up slowly
+  - acceptance: Coins to collect; score = distance + coins; squash-and-stretch on the slime for a juicy feel
+  - acceptance: Fair: coyote time and jump buffering so taps never feel eaten
+  - acceptance: Start screen, pause, game over with Retry; best score saves; Export/Import works
+  - acceptance: Reduced motion: no screen shake
+  - acceptance: Unit test (tests/unit): chunk generator is deterministic for a seed and every chunk is jumpable (gap widths under max jump distance)
+  - acceptance: smoke.js: start, tap/press to jump, check the slime left the ground and the distance went up
+
+- [ ] `gravity-golf` - Gravity Golf: Mini golf in space. Pull back, aim, and let the planets' gravity curve your shot into the hole.
+  - acceptance: Drag back from the ball to aim (slingshot); a dotted preview shows the first moment of the path; arrow keys + Space on desktop
+  - acceptance: Planets pull the ball with inverse-square gravity; black holes swallow it; asteroids bounce it
+  - acceptance: 12 hand-made holes in items/gravity-golf/levels.js, each with a par; strokes and a scorecard
+  - acceptance: Best strokes per hole saves; Export/Import works
+  - acceptance: Unit test (tests/unit): the physics step is deterministic, and every level's data is valid (ball, hole and planets on screen, not overlapping)
+  - acceptance: smoke.js: drag/shoot, check strokes became 1 and the ball moved
+
+- [ ] `brick-breaker` - Brick Breaker+: The classic brick breaker, with real bounce angles, tough bricks and power-ups like multi-ball and lasers.
+  - acceptance: Paddle: drag anywhere on phone, mouse or arrow keys on desktop; tap / Space launches
+  - acceptance: Bounce angle depends on where the ball hits the paddle; proper circle-vs-rectangle collisions (no tunnelling at high speed)
+  - acceptance: Bricks with 1-3 hit points (colour shows HP); power-ups: multi-ball, wide paddle, slow ball, laser, extra life
+  - acceptance: 10 hand-made levels in items/brick-breaker/levels.js, then endless generated levels; 3 lives
+  - acceptance: Best score saves; Export/Import works
+  - acceptance: Reduced motion: no shake or flashes
+  - acceptance: Unit test (tests/unit): circle-rectangle collision and reflection maths, including fast balls
+  - acceptance: smoke.js: launch, move the paddle, check the ball moved and the paddle moved
 ## Ideas (not ready yet)
 
 - (add more here)
