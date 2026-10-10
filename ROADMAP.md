@@ -81,18 +81,18 @@ Tonight's three for 🎮 Arcade, in this order.
 
 Two more games. One is a teaser for MISSION C.H.I.P.L.E.R. and links to its page.
 
-- [ ] `chipler-colony` - Chipler Colony: One little Chipler crash-lands on a tiny round planet and copies himself. Grow a colony and keep Empress Chippa happy... or don't.
-  - acceptance: A tiny round planet drawn in code (no images or sprites): pastel tiles around the rim, Chiplers walking on the surface; swipe (touch) or arrow keys turn the planet
-  - acceptance: Start with ONE Chipler, Nib-001. "Copy" makes a new Chipler when there's enough food; each copy gets one small random trait (faster, sleepy, strong, carries two) shown when you tap it
-  - acceptance: Buildings on surface slots: farm (food), forge (tools), house (room for more); Chiplers walk to jobs by themselves; resources in a top bar
-  - acceptance: Empress Chippa calls on the radio every couple of minutes (first message: "Mummy's peckish."): Ship it (pays Blueprints that unlock the next building) or Refuse; a small Empire Favor vs Planet Harmony scale shows the balance
-  - acceptance: Three eras: Crash Site, Outpost, Settlement, each with 2-3 goals; finishing Settlement shows a summary card and a link "The full game: MISSION C.H.I.P.L.E.R." to https://jonjoe1001.dev/projects/mission-chipler.html
-  - acceptance: Cozy: nobody dies; a hungry Chipler just slows down
-  - acceptance: Pure rules in items/chipler-colony/colony.js (economy tick, copy rules, orders, era goals)
+- [x] `chipler-colony` - Chipler Colony: One little Chipler lands on a tiny round planet and copies himself. Build farms and forges and grow a whole colony.
+  - acceptance: A tiny round planet drawn in code (no images or sprites): pastel tiles round the rim, 8 plots, Chiplers walking on the surface; swipe (touch), tap a plot, or arrow keys turn the planet
+  - acceptance: Start with ONE Chipler. "Copy" makes a new Chipler when there's enough food and room; each copy gets one random trait (Fast, Sleepy, Strong, Carries two), shown when you tap it (or T) and in a roster list
+  - acceptance: Buildings on plots: farm (food), forge (tools), house (room + storage), plus the landing pod; Chiplers pick jobs, walk, work and carry goods to the nearest pod or house by themselves; resources in a top bar
+  - acceptance: Plain "Requests" every half minute or so (e.g. "8 food -> +2 Blueprints") with Send / Skip; Blueprints unlock the forge (2) and the house (4); skipping just brings the next request sooner. No characters, no story
+  - acceptance: Stages 1, 2 and 3, each with 3 goals; finishing Stage 3 shows an end card with a link "Chiplers are from MISSION C.H.I.P.L.E.R., a game in the works" to https://jonjoe1001.dev/projects/mission-chipler.html
+  - acceptance: Cozy: nobody dies; with no food Chiplers walk and work at half speed
+  - acceptance: Pure rules in items/chipler-colony/colony.js (economy tick, copy rules, requests, stage goals, save check)
   - acceptance: Saves the colony; Export/Import works
-  - acceptance: Reduced motion: no shake, gentle camera
-  - acceptance: Unit test (tests/unit): copying costs food and adds a Chipler with a trait, a farm tick adds food, refusing an order raises Harmony and lowers Favor, finishing an era's goals unlocks the next
-  - acceptance: smoke.js: build a farm, let it run, Copy, check the population went from 1 to 2
+  - acceptance: Reduced motion: no hops, sway, smoke or pop-ins; gentler camera; nothing shakes or flashes
+  - acceptance: Unit test (tests/unit): copying costs food and adds a Chipler with a trait, a farm tick adds food, sending a request pays Blueprints and skipping pays nothing, finishing a stage's goals unlocks the next, a simple bot finishes all 3 stages
+  - acceptance: smoke.js: build a farm, let it run, turn the planet, Copy, check the population went from 1 to 2
 
 - [x] `stack-tower` - Stack Tower: Drop blocks onto a wobbly tower with real physics. How high can you build before it all comes crashing down?
   - acceptance: A block slides back and forth above the tower; tap or Space drops it
