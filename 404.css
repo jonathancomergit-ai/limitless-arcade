@@ -1,0 +1,10 @@
+/* ============================================================
+   404 page - the few extras kit.css doesn't have
+   ============================================================ */
+
+.lost-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+  margin-top: 1.6rem;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!-- Privacy lock. Only this site's own files may load, plus GoatCounter.
+       Same line on every page - tests/unit/pages.test.js checks it. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://gc.zgo.at; connect-src 'self' https://jonjoe1001.goatcounter.com; img-src 'self' data: blob: https://jonjoe1001.goatcounter.com; style-src 'self'; font-src 'self'; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <title>Page not found - Limitless Arcade</title>
+  <meta name="description" content="That page wandered off. Head back to the Arcade.">
+  <meta name="theme-color" content="#07070C">
+  <meta name="robots" content="noindex">
+
+  <!-- GitHub Pages serves this file for a missing page at ANY depth,
+       so every path here is absolute (/limitless-arcade/...). -->
+  <link rel="icon" href="/limitless-arcade/kit/icon.svg" type="image/svg+xml">
+  <link rel="preload" href="/limitless-arcade/kit/fonts/space-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/limitless-arcade/kit/kit.css">
+  <link rel="stylesheet" href="/limitless-arcade/404.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="/limitless-arcade/">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>Limitless Arcade</span>
+      </a>
+      <nav class="nav-links" aria-label="Site">
+        <a class="btn btn-sm" href="https://jonjoe1001.dev/"><span aria-hidden="true">&larr;</span> Home</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ===================== NOT FOUND ===================== -->
+    <section class="hero">
+      <div class="wrap">
+        <p class="kicker">404</p>
+        <h1>That page <span class="glow">wandered off</span></h1>
+        <p class="hero-lead">It may have moved, or the link has a typo.</p>
+        <div class="lost-actions">
+          <a class="btn btn-primary" href="/limitless-arcade/">Back to the Arcade</a>
+          <a class="btn" href="https://jonjoe1001.dev/limitless.html">All of Limitless Lab</a>
+          <a class="btn btn-ghost" href="https://jonjoe1001.dev/">Home</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p class="privacy-note">
+        <strong>No accounts, no cookies.</strong> Saves stay on your device.
+        Cookie-free visit counts via GoatCounter.
+        <a href="https://jonjoe1001.dev/privacy.html#limitless">Privacy</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="/limitless-arcade/kit/stats.js" defer></script>
+</body>
+</html>
