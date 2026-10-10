@@ -185,7 +185,7 @@ $("resume-btn").addEventListener("click", () => loop.resume());
    follows the pointer. A tap (or click) launches.
    ============================================================ */
 const keys = createKeys();
-let drag = null;               // { startX, paddleX, moved }
+let drag = null;               // { id, startX, paddleX, moved } - id: the owning pointer
 let overT = 0;
 
 function launch() {
@@ -202,18 +202,21 @@ function launch() {
 
 pointer(stage, {
   down(p) {
+    if (drag) { return; }      // a second finger can't take over the paddle
     const f = toField(p.x, p.y);
-    drag = { startX: f.x, paddleX: paddle.x, moved: 0 };
+    drag = { id: p.id, startX: f.x, paddleX: paddle.x, moved: 0 };
     if (p.type === "mouse") { movePaddleTo(f.x); }
   },
   move(p, isDown) {
     const f = toField(p.x, p.y);
+    const owns = isDown && drag && p.id === drag.id;
     if (p.type === "mouse") { if (state.mode === "play" && !loop.paused) { movePaddleTo(f.x); } }
-    else if (isDown && drag) { movePaddleTo(drag.paddleX + (f.x - drag.startX) * 1.15); }
-    if (isDown && drag) { drag.moved = Math.max(drag.moved, Math.abs(f.x - drag.startX)); }
+    else if (owns) { movePaddleTo(drag.paddleX + (f.x - drag.startX) * 1.15); }
+    if (owns) { drag.moved = Math.max(drag.moved, Math.abs(f.x - drag.startX)); }
   },
   up(p) {
-    if (drag && !p.cancelled && drag.moved < 10) { launch(); }
+    if (!drag || p.id !== drag.id) { return; }
+    if (!p.cancelled && drag.moved < 10) { launch(); }
     drag = null;
   }
 });
