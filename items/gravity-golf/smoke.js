@@ -6,6 +6,7 @@
    Desktop: press Space to start, nudge the aim with the arrow
             keys, then Space to shoot.
 
+   First: a tap away from the ball (no drag) must not shoot.
    Checks: strokes became 1 and the ball moved.
    ============================================================ */
 
@@ -29,6 +30,19 @@ export default async function smoke({ page, expect, isMobile }) {
   await expect(page.locator("#start-screen")).toBeHidden();
   const before = await read();
   expect(before.strokes).toBe(0);
+
+  /* ---- a stray tap away from the ball must not shoot ---- */
+  {
+    const box = await page.locator("#stage").boundingBox();
+    const ball = await page.evaluate(() => window.__item.ballOnScreen());
+    const dy = ball.y + 60 < box.height ? 60 : -60;
+    const tx = box.x + ball.x, ty = box.y + ball.y + dy;
+    if (isMobile) { await page.touchscreen.tap(tx, ty); } else { await page.mouse.click(tx, ty); }
+    await page.waitForTimeout(300);
+    const still = await read();
+    expect(still.strokes, "a tap with no drag takes no stroke").toBe(0);
+    expect(Math.hypot(still.x - before.x, still.y - before.y), "a tap with no drag leaves the ball").toBeLessThan(1);
+  }
 
   /* ---- shoot ---- */
   if (isMobile) {

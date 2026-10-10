@@ -271,8 +271,9 @@ function pullFromDrag() {
 pointer(stage, {
   down(p) {
     if (!canShoot()) { return; }
-    state.drag = toField(p.x, p.y);
-    state.dragFrom = { ...state.drag };
+    /* the pull starts at zero: a tap with no drag never shoots */
+    state.drag = { x: state.ball.x, y: state.ball.y };
+    state.dragFrom = toField(p.x, p.y);
     state.aimBy = "drag";
 
   },
