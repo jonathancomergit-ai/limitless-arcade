@@ -86,6 +86,7 @@ const state = exposeForTests({
   aim: { angle: -Math.PI / 2, power: 0.45 },
   aimBy: null,                  // "drag" | "keys" | null
   drag: null,                   // { x, y } finger, in field units
+  dragId: null,                 // the pointer that owns the drag (others are ignored)
   squash: 0,
   /* For smoke.js: where the ball is, in CSS px inside the stage. */
   ballOnScreen: () => toScreen(state.ball.x, state.ball.y)
@@ -270,7 +271,8 @@ function pullFromDrag() {
 
 pointer(stage, {
   down(p) {
-    if (!canShoot()) { return; }
+    if (!canShoot() || state.drag) { return; }   // a second finger can't take over
+    state.dragId = p.id;
     /* the pull starts at zero: a tap with no drag never shoots */
     state.drag = { x: state.ball.x, y: state.ball.y };
     state.dragFrom = toField(p.x, p.y);
@@ -278,7 +280,7 @@ pointer(stage, {
 
   },
   move(p, isDown) {
-    if (!isDown || !state.drag) { return; }
+    if (!isDown || !state.drag || p.id !== state.dragId) { return; }
     /* the drag is measured from where the finger went down,
        so you don't have to hit the tiny ball exactly */
     const f = toField(p.x, p.y);
@@ -288,7 +290,7 @@ pointer(stage, {
     state.aim.power = s.power;
   },
   up(p) {
-    if (!state.drag) { return; }
+    if (!state.drag || p.id !== state.dragId) { return; }
     const s = pullFromDrag();
     state.drag = null;
     state.aimBy = null;
