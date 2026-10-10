@@ -68,13 +68,13 @@
   {
     "slug": "chipler-colony",
     "title": "Chipler Colony",
-    "blurb": "One little Chipler crash-lands on a tiny round planet and copies himself. Grow a colony and keep Empress Chippa happy... or don't.",
+    "blurb": "One little Chipler lands on a tiny round planet and copies himself. Build farms and forges and grow a whole colony.",
     "tags": [
       "cozy",
       "strategy"
     ],
     "added": "2026-10-10",
-    "soon": true
+    "thumb": "thumb.webp"
   },
   {
     "slug": "stack-tower",

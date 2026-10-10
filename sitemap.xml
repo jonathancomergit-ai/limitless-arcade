@@ -2,11 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://jonjoe1001.dev/limitless-arcade/</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-10</lastmod>
   </url>
   <url>
     <loc>https://jonjoe1001.dev/limitless-arcade/items/brick-breaker/</loc>
     <lastmod>2026-10-09</lastmod>
+  </url>
+  <url>
+    <loc>https://jonjoe1001.dev/limitless-arcade/items/chipler-colony/</loc>
+    <lastmod>2026-10-10</lastmod>
   </url>
   <url>
     <loc>https://jonjoe1001.dev/limitless-arcade/items/daily-grid/</loc>
