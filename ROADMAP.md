@@ -76,6 +76,35 @@ Tonight's three for 🎮 Arcade, in this order.
   - acceptance: Reduced motion: no shake or flashes
   - acceptance: Unit test (tests/unit): circle-rectangle collision and reflection maths, including fast balls
   - acceptance: smoke.js: launch, move the paddle, check the ball moved and the paddle moved
+
+### Batch 3
+
+Two more games. One is a teaser for MISSION C.H.I.P.L.E.R. and links to its page.
+
+- [ ] `chipler-colony` - Chipler Colony: One little Chipler crash-lands on a tiny round planet and copies himself. Grow a colony and keep Empress Chippa happy... or don't.
+  - acceptance: A tiny round planet drawn in code (no images or sprites): pastel tiles around the rim, Chiplers walking on the surface; swipe (touch) or arrow keys turn the planet
+  - acceptance: Start with ONE Chipler, Nib-001. "Copy" makes a new Chipler when there's enough food; each copy gets one small random trait (faster, sleepy, strong, carries two) shown when you tap it
+  - acceptance: Buildings on surface slots: farm (food), forge (tools), house (room for more); Chiplers walk to jobs by themselves; resources in a top bar
+  - acceptance: Empress Chippa calls on the radio every couple of minutes (first message: "Mummy's peckish."): Ship it (pays Blueprints that unlock the next building) or Refuse; a small Empire Favor vs Planet Harmony scale shows the balance
+  - acceptance: Three eras: Crash Site, Outpost, Settlement, each with 2-3 goals; finishing Settlement shows a summary card and a link "The full game: MISSION C.H.I.P.L.E.R." to https://jonjoe1001.dev/projects/mission-chipler.html
+  - acceptance: Cozy: nobody dies; a hungry Chipler just slows down
+  - acceptance: Pure rules in items/chipler-colony/colony.js (economy tick, copy rules, orders, era goals)
+  - acceptance: Saves the colony; Export/Import works
+  - acceptance: Reduced motion: no shake, gentle camera
+  - acceptance: Unit test (tests/unit): copying costs food and adds a Chipler with a trait, a farm tick adds food, refusing an order raises Harmony and lowers Favor, finishing an era's goals unlocks the next
+  - acceptance: smoke.js: build a farm, let it run, Copy, check the population went from 1 to 2
+
+- [ ] `stack-tower` - Stack Tower: Drop blocks onto a wobbly tower with real physics. How high can you build before it all comes crashing down?
+  - acceptance: A block slides back and forth above the tower; tap or Space drops it
+  - acceptance: Real 2D rigid bodies in plain JS (items/stack-tower/physics.js): boxes, gravity, friction, resting contact, tipping. No libraries
+  - acceptance: Camera rises with the tower; height in metres and best height
+  - acceptance: Game over when a block lands below the base; instant restart
+  - acceptance: Block widths vary a little; a near-centred drop shows "Perfect!" and gives a bonus
+  - acceptance: Saves best height; Export/Import works
+  - acceptance: Reduced motion: no shake or flashes
+  - acceptance: Unit test (tests/unit): a box resting on the ground doesn't drift or jitter over 5 simulated seconds, a box dropped half over an edge tips off, total energy never grows
+  - acceptance: smoke.js: drop 3 blocks, check the block count and height went up
+
 ## Ideas (not ready yet)
 
 - (add more here)

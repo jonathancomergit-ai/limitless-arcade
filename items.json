@@ -64,5 +64,27 @@
     ],
     "added": "2026-10-09",
     "thumb": "thumb.webp"
+  },
+  {
+    "slug": "chipler-colony",
+    "title": "Chipler Colony",
+    "blurb": "One little Chipler crash-lands on a tiny round planet and copies himself. Grow a colony and keep Empress Chippa happy... or don't.",
+    "tags": [
+      "cozy",
+      "strategy"
+    ],
+    "added": "2026-10-10",
+    "soon": true
+  },
+  {
+    "slug": "stack-tower",
+    "title": "Stack Tower",
+    "blurb": "Drop blocks onto a wobbly tower with real physics. How high can you build before it all comes crashing down?",
+    "tags": [
+      "physics",
+      "one-button"
+    ],
+    "added": "2026-10-10",
+    "soon": true
   }
 ]
