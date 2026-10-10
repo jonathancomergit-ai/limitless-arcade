@@ -94,7 +94,7 @@ Two more games. One is a teaser for MISSION C.H.I.P.L.E.R. and links to its page
   - acceptance: Unit test (tests/unit): copying costs food and adds a Chipler with a trait, a farm tick adds food, sending a request pays Blueprints and skipping pays nothing, finishing a stage's goals unlocks the next, a simple bot finishes all 3 stages
   - acceptance: smoke.js: build a farm, let it run, turn the planet, Copy, check the population went from 1 to 2
 
-- [ ] `stack-tower` - Stack Tower: Drop blocks onto a wobbly tower with real physics. How high can you build before it all comes crashing down?
+- [x] `stack-tower` - Stack Tower: Drop blocks onto a wobbly tower with real physics. How high can you build before it all comes crashing down?
   - acceptance: A block slides back and forth above the tower; tap or Space drops it
   - acceptance: Real 2D rigid bodies in plain JS (items/stack-tower/physics.js): boxes, gravity, friction, resting contact, tipping. No libraries
   - acceptance: Camera rises with the tower; height in metres and best height
