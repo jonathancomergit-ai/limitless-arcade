@@ -2,6 +2,8 @@
 
 One wing of **Limitless Lab**. Small games that run in your browser. Phone or keyboard, no installs, no accounts.
 
+© 2026 Jonathan Comer. All rights reserved. The code and content here are public to read, but not licensed for reuse.
+
 ## The kit
 
 One kit, three wings, each in its own repo:
